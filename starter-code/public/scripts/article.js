@@ -5,9 +5,13 @@ function Article (rawDataObj) {
   We can also set properties on objects with bracket notation instead of dot notation, which we must do when we don't necessarily know what the property name will be and thus set it as a variable.
   Additionally, what "this" is changes depending on your context - inside a constructor function, like Article, "this" refers to the newly instantiated object. However, inside the anonymous function we're passing into forEach as an argument, "this" in 'use strict' mode will be undefined. As a result, we can pass our instantiated object "this" into forEach as a second argument to preserve context.
   There is a LOT of new behavior going on here! Review object bracket notation and Object.keys to try and grok what's going on here.*/
-  Object.keys(rawDataObj).forEach(key => {
+  Object.keys(rawDataObj).forEach(function(key) {
     this[key] = rawDataObj[key];
   }, this);
+
+  // STRETCH COMMENT: How might we refactor code to handle the "this" issue in another way?
+
+  // STRETCH COMMENT: DOUBLE STRETCH COMMENT: How could rawDataObj properties be applied to article instance in one short line? Hint: It's an ES6 feature we haven't covered yet. To the docs!
 }
 
 Article.all = [];
@@ -39,6 +43,8 @@ Article.fetchAll = callback => {
     }
   )
 };
+
+// STRETCH COMMENT: how might we use Promises in streamlined way condense this code?
 
 
 // REVIEW: Take a few minutes and review what each of these new methods do in relation to our server and DB
