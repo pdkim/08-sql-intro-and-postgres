@@ -1,7 +1,7 @@
 # PostgreSQL Shell Cheat Sheet
 
 ## Starting the server
-*You must do this every time you restart your machine*
+*You must do this every time you restart your Mac*
 ```
 $ brew services start postgres
 ```
