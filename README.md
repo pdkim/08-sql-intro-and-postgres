@@ -66,7 +66,7 @@ _Your repository must include:_
 - Install and require the NPM PostgreSQL package `pg` in your server.js file.
 - Make sure to complete the connection string.
   - Windows and Linux users: You should have retained the user/password from the pre-work for this course. Your OS may require that your connection string is composed of additional information including user and password. For example: `const conString = 'postgres://USER:PASSWORD@HOST:PORT/DBNAME'`;
-  - Mac users: `const conString = 'postgres://localhost:5432'`;
+  - Mac users: `const conString = 'postgres://localhost:5432/DBNAME'`;
 - Pass the appropriate argument when instantiating a new Client.
 - The articleView.js methods are different now that we are not accessing the JSON file directly, and instead retrieving the articles from a database. Therefore, we no longer need to export the JSON, so remove all code that was involved in performing this action.
 
