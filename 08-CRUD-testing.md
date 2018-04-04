@@ -1,5 +1,7 @@
 ## Lab 8 - Testing CRUD operations in the console
 
+### Steps to test Create, Read, Update and Delete operations once server.js is complete.
+---
 ### Create a record (POST)
 
 Go into the **psql** shell and enter `SELECT COUNT(*) from articles;` to view the current number of records in the table. Then, in the browser console:
