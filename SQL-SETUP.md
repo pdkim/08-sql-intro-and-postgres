@@ -33,8 +33,8 @@ For working in our codebase, we will need to supply the `server.js` file a varia
     `const conString = 'postgres://USER:PASSWORD@HOST:PORT/DBNAME'`
 - Example: 
     
-    `const conString = 'postgres://postgres:1234@localhost:5432/postgres'`
+    `const conString = 'postgres://postgres:1234@localhost:5432/DBNAME'`
 - On macOS, your username and password __should__ be automatically provided, so you can simplify: 
     
-    `const conString = 'postgres://localhost:5432'`
+    `const conString = 'postgres://localhost:5432/DBNAME'`
 
