@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const express = require('express');
+const pg = require('pg');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -9,11 +10,12 @@ const app = express();
 // Windows and Linux users: You should have retained the user/password from the pre-work for this course.
 // Your OS may require that your conString is composed of additional information including user and password.
 // const conString = 'postgres://USER:PASSWORD@HOST:PORT/DBNAME';
+const conString = 'postgres://postgres:Achika1220!@localhost:3000/lab08';
 
 // Mac:
 // const conString = 'postgres://localhost:5432/DBNAME';
 
-const client = new pg.Client();
+const client = new pg.Client(conString);
 
 // REVIEW: Use the client object to connect to our DB.
 client.connect();
@@ -21,7 +23,7 @@ client.connect();
 
 // REVIEW: Install the middleware plugins so that our app can parse the request body
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('./public'));
 
 
